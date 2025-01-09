@@ -1,1 +1,3 @@
-export const APP = 'HELLO WORLD';
+export * from './auth.module';
+export * from './auth.service';
+export * from './providers';

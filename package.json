@@ -5,6 +5,11 @@
   "author": "",
   "private": false,
   "license": "UNLICENSED",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "package.json"
+  ],
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
@@ -90,5 +95,23 @@
         "infile": "CHANGELOG.md"
       }
     }
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/novatorsoft/nestjs-auth-module"
+  },
+  "keywords": [
+    "nestjs",
+    "plugin",
+    "nestjs-plugin",
+    "auth",
+    "auth-module",
+    "auth-module-nestjs",
+    "auth-module-nestjs-plugin",
+    "auth-module-nestjs-plugin-module"
+  ],
+  "bugs": {
+    "url": "https://github.com/novatorsoft/nestjs-auth-module/issues-module"
+  },
+  "homepage": "https://github.com/novatorsoft/nestjs-auth-module#readme-module"
 }

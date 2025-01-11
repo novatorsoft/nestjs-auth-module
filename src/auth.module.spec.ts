@@ -59,6 +59,23 @@ describe('AuthModule', () => {
         expect(service).toBeDefined();
       });
 
+      it('JWT Auth should be defined(with default global config)', async () => {
+        const jwtConfig = MockFactory(JwtConfigFixture).one();
+        const module = await Test.createTestingModule({
+          imports: [
+            AuthModule.registerAsync({
+              provider: jwtConfig.provider,
+              useFactory: () => jwtConfig,
+              inject: [],
+            }),
+          ],
+        }).compile();
+
+        const service =
+          module.get<AuthService<GenerateJwtTokenOptions>>('AuthService');
+        expect(service).toBeDefined();
+      });
+
       it('JWT Auth should be defined (global defined)', async () => {
         const jwtConfig = MockFactory(JwtConfigFixture).one();
         const module = await Test.createTestingModule({

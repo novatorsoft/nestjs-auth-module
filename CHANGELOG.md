@@ -1,5 +1,12 @@
 
 
+## [1.1.0](https://github.com/novatorsoft/nestjs-auth-module/compare/v1.0.5...v1.1.0) (2025-02-16)
+
+
+### Features
+
+* update token payload model ([dd1175d](https://github.com/novatorsoft/nestjs-auth-module/commit/dd1175d9fa3b2e3e2a6c9a04adab6dcfda9f3224))
+
 ## [1.0.5](https://github.com/novatorsoft/nestjs-auth-module/compare/v1.0.4...v1.0.5) (2025-02-16)
 
 ## [1.0.4](https://github.com/novatorsoft/nestjs-auth-module/compare/v1.0.3...v1.0.4) (2025-02-16)

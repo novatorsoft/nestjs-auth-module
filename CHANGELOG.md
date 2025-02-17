@@ -1,5 +1,14 @@
 
 
+## [1.2.0](https://github.com/novatorsoft/nestjs-auth-module/compare/v1.1.0...v1.2.0) (2025-02-17)
+
+
+### Features
+
+* create auth guard ([6ea0106](https://github.com/novatorsoft/nestjs-auth-module/commit/6ea01067c1827173d60ec75ec783fba90b42f8e8))
+* create authorization token decorator ([9c294a3](https://github.com/novatorsoft/nestjs-auth-module/commit/9c294a3e82afdf1172e581f3c3f8ddfd9648dc56))
+* create token payload decorator ([265b697](https://github.com/novatorsoft/nestjs-auth-module/commit/265b697fd5b6bdc1be7fe3b502280c1973ff09b5))
+
 ## [1.1.0](https://github.com/novatorsoft/nestjs-auth-module/compare/v1.0.5...v1.1.0) (2025-02-16)
 
 

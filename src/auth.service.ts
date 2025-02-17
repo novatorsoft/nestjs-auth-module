@@ -1,6 +1,6 @@
 import { GenerateTokenResult, TokenPayload } from './dto';
 
-export interface AuthService<GenerateTokenOptions> {
+export interface AuthService<GenerateTokenOptions = undefined> {
   generateAsync(
     payload: TokenPayload,
     options?: GenerateTokenOptions,

@@ -1,5 +1,12 @@
 
 
+## [1.2.2](https://github.com/novatorsoft/nestjs-auth-module/compare/v1.2.1...v1.2.2) (2025-03-09)
+
+
+### Bug Fixes
+
+* fix for auth module ([4815578](https://github.com/novatorsoft/nestjs-auth-module/commit/481557854e426d838d3d5734bd304d2a1c76c265))
+
 ## [1.2.1](https://github.com/novatorsoft/nestjs-auth-module/compare/v1.2.0...v1.2.1) (2025-02-17)
 
 ## [1.2.0](https://github.com/novatorsoft/nestjs-auth-module/compare/v1.1.0...v1.2.0) (2025-02-17)

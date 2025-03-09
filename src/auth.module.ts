@@ -3,6 +3,7 @@ import * as lodash from 'lodash';
 import { AuthAsyncConfig, ConfigType } from './config/auth-async.config';
 import { DynamicModule, Module } from '@nestjs/common';
 
+import { AuthGuard } from './guards';
 import { AuthProvider } from './dto';
 import { JwtService } from './providers/jwt/jwt.service';
 
@@ -18,6 +19,7 @@ export class AuthModule {
             provide: 'AuthConfig',
             useValue: config,
           },
+          AuthGuard,
         ],
         exports: ['AuthService'],
       },
@@ -38,6 +40,7 @@ export class AuthModule {
             useFactory: config.useFactory,
             inject: config.inject,
           },
+          AuthGuard,
         ],
       },
       AuthModule.getAuthProviderModuleConfig(config?.provider),

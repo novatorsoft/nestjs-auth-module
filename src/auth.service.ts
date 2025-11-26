@@ -1,10 +1,18 @@
+import * as ms from 'ms';
+
 import { GenerateTokenResult, TokenPayloadModel } from './dto';
 
-export interface AuthService<GenerateTokenOptions = undefined> {
-  generateAsync(
+export abstract class AuthService<GenerateTokenOptions = undefined> {
+  protected readonly defaultExpiresIn: string = '365d';
+
+  abstract generateAsync(
     payload: TokenPayloadModel,
     options?: GenerateTokenOptions,
   ): Promise<GenerateTokenResult>;
-  verifyAsync(token: string): Promise<boolean>;
-  decodeAsync(token: string): Promise<TokenPayloadModel>;
+  abstract verifyAsync(token: string): Promise<boolean>;
+  abstract decodeAsync(token: string): Promise<TokenPayloadModel>;
+
+  protected getExpiresIn(expiresIn?: number | string): Date {
+    return new Date(Date.now() + ms(expiresIn as ms.StringValue));
+  }
 }

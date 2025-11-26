@@ -1,3 +1,5 @@
+import * as ms from 'ms';
+
 import { Faker, MockFactory } from 'mockingbird';
 import { Test, TestingModule } from '@nestjs/testing';
 
@@ -42,7 +44,9 @@ describe('JwtService', () => {
       { expiresIn: '1h' },
     );
     expect(result).toBeDefined();
-    expect(result.expiresIn).toBe('1h');
+    expect(result.expiresIn).toBe(
+      new Date(Date.now() + ms('1h')).toISOString(),
+    );
   });
 
   it('should generate a token with algorithm', async () => {
@@ -75,5 +79,11 @@ describe('JwtService', () => {
     await expect(service.decodeAsync(Faker.lorem.word(256))).rejects.toThrow(
       'Token is invalid or expired.',
     );
+  });
+
+  it('should correctly calculate expiresIn using getExpiresIn', () => {
+    const expiresIn = service['getExpiresIn']('2d');
+    expect(expiresIn).toBeInstanceOf(Date);
+    expect(expiresIn.getTime()).toBe(Date.now() + ms('2d'));
   });
 });

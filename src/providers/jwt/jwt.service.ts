@@ -7,16 +7,21 @@ import { JwtConfig } from './jwt.config';
 import { SignJWT, jwtVerify } from 'jose';
 
 @Injectable()
-export class JwtService implements AuthService<GenerateJwtTokenOptions> {
-  constructor(@Inject('AuthConfig') private readonly jwtConfig: JwtConfig) {}
+export class JwtService extends AuthService<GenerateJwtTokenOptions> {
+  constructor(@Inject('AuthConfig') private readonly jwtConfig: JwtConfig) {
+    super();
+  }
 
   async generateAsync(
     payload?: TokenPayloadModel,
     options?: GenerateJwtTokenOptions,
   ): Promise<GenerateTokenResult> {
     const secretKey = new TextEncoder().encode(this.jwtConfig.secret);
-    const expiresIn =
-      options?.expiresIn ?? this.jwtConfig?.defaultOptions?.expiresIn ?? '365d';
+    const expiresIn = this.getExpiresIn(
+      options?.expiresIn ??
+        this.jwtConfig?.defaultOptions?.expiresIn ??
+        this.defaultExpiresIn,
+    );
 
     const token = await new SignJWT(payload ?? {})
       .setProtectedHeader({
@@ -31,7 +36,7 @@ export class JwtService implements AuthService<GenerateJwtTokenOptions> {
 
     return {
       token,
-      expiresIn,
+      expiresIn: expiresIn.toISOString(),
     };
   }
 

@@ -3,3 +3,4 @@ export * from './auth.service';
 export * from './providers';
 export * from './decorators';
 export * from './guards';
+export * from './dto';

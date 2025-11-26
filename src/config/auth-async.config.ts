@@ -7,7 +7,7 @@ export type ConfigType = JwtConfig;
 
 export type AuthAsyncConfig = Pick<ModuleMetadata, 'imports'> &
   Pick<
-    FactoryProvider<Pick<ConfigType, 'provider' | 'isGlobal'>>,
+    FactoryProvider<Omit<ConfigType, 'provider' | 'isGlobal'>>,
     'useFactory' | 'inject'
   > &
   AuthConfig;

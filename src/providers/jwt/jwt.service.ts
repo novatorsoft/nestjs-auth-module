@@ -1,4 +1,4 @@
-import { GenerateTokenResult, TokenPayload } from '../../dto';
+import { GenerateTokenResult, TokenPayloadModel } from '../../dto';
 
 import { AuthService } from '../../auth.service';
 import { GenerateJwtTokenOptions } from './dto';
@@ -11,7 +11,7 @@ export class JwtService implements AuthService<GenerateJwtTokenOptions> {
   constructor(@Inject('AuthConfig') private readonly jwtConfig: JwtConfig) {}
 
   async generateAsync(
-    payload?: TokenPayload,
+    payload?: TokenPayloadModel,
     options?: GenerateJwtTokenOptions,
   ): Promise<GenerateTokenResult> {
     const secretKey = new TextEncoder().encode(this.jwtConfig.secret);
@@ -44,10 +44,10 @@ export class JwtService implements AuthService<GenerateJwtTokenOptions> {
     }
   }
 
-  async decodeAsync(token: string): Promise<TokenPayload> {
+  async decodeAsync(token: string): Promise<TokenPayloadModel> {
     try {
       const secretKey = new TextEncoder().encode(this.jwtConfig.secret);
-      return (await jwtVerify(token, secretKey)).payload as TokenPayload;
+      return (await jwtVerify(token, secretKey)).payload as TokenPayloadModel;
     } catch {
       throw new Error('Token is invalid or expired.');
     }

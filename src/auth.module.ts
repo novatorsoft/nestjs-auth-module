@@ -27,7 +27,7 @@ export class AuthModule {
     );
   }
 
-  static registerAsync(config: AuthAsyncConfig): Promise<DynamicModule> {
+  static registerAsync(config: AuthAsyncConfig): DynamicModule {
     return AuthModule.mergeObject(
       {
         module: AuthModule,

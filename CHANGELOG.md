@@ -1,5 +1,12 @@
 
 
+## [1.2.4](https://github.com/novatorsoft/nestjs-auth-module/compare/v1.2.3...v1.2.4) (2025-11-26)
+
+
+### Bug Fixes
+
+* update sonar exclusions and refactor registerAsync return type in AuthModule ([0c9a9ee](https://github.com/novatorsoft/nestjs-auth-module/commit/0c9a9eefdca5236fc641116244cef3e11ea0fccd))
+
 ## [1.2.3](https://github.com/novatorsoft/nestjs-auth-module/compare/v1.2.2...v1.2.3) (2025-11-26)
 
 ## [1.2.2](https://github.com/novatorsoft/nestjs-auth-module/compare/v1.2.1...v1.2.2) (2025-03-09)

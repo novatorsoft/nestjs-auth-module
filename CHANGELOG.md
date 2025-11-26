@@ -1,5 +1,12 @@
 
 
+## [1.3.0](https://github.com/novatorsoft/nestjs-auth-module/compare/v1.2.4...v1.3.0) (2025-11-26)
+
+
+### Features
+
+* enhance JWT service with expiration handling and add ms package for time calculations ([50ec9da](https://github.com/novatorsoft/nestjs-auth-module/commit/50ec9da968d02d2e52d9ba321e079f04e83f2e92))
+
 ## [1.2.4](https://github.com/novatorsoft/nestjs-auth-module/compare/v1.2.3...v1.2.4) (2025-11-26)
 
 

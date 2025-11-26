@@ -1,5 +1,7 @@
 
 
+## [1.2.3](https://github.com/novatorsoft/nestjs-auth-module/compare/v1.2.2...v1.2.3) (2025-11-26)
+
 ## [1.2.2](https://github.com/novatorsoft/nestjs-auth-module/compare/v1.2.1...v1.2.2) (2025-03-09)
 
 

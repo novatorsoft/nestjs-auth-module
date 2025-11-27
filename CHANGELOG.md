@@ -1,5 +1,12 @@
 
 
+## [1.3.1](https://github.com/novatorsoft/nestjs-auth-module/compare/v1.3.0...v1.3.1) (2025-11-27)
+
+
+### Bug Fixes
+
+* include AuthGuard in exports of AuthModule ([9468fdb](https://github.com/novatorsoft/nestjs-auth-module/commit/9468fdb8fae46c83b6221d5da67016d90e5fba8c))
+
 ## [1.3.0](https://github.com/novatorsoft/nestjs-auth-module/compare/v1.2.4...v1.3.0) (2025-11-26)
 
 

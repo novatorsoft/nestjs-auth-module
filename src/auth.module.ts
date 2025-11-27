@@ -21,7 +21,7 @@ export class AuthModule {
           },
           AuthGuard,
         ],
-        exports: ['AuthService'],
+        exports: ['AuthService', AuthGuard],
       },
       AuthModule.getAuthProviderModuleConfig(config?.provider),
     );
@@ -33,7 +33,6 @@ export class AuthModule {
         module: AuthModule,
         global: config?.isGlobal ?? false,
         imports: config.imports,
-        exports: ['AuthService'],
         providers: [
           {
             provide: 'AuthConfig',
@@ -42,6 +41,7 @@ export class AuthModule {
           },
           AuthGuard,
         ],
+        exports: ['AuthService', AuthGuard],
       },
       AuthModule.getAuthProviderModuleConfig(config?.provider),
     );

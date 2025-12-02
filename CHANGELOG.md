@@ -1,5 +1,12 @@
 
 
+## [1.3.2](https://github.com/novatorsoft/nestjs-auth-module/compare/v1.3.1...v1.3.2) (2025-12-02)
+
+
+### Bug Fixes
+
+* improve error handling in AuthGuard for missing and invalid tokens ([0caf138](https://github.com/novatorsoft/nestjs-auth-module/commit/0caf138b9d5ce1f35437f1b3489f82458f3f2088))
+
 ## [1.3.1](https://github.com/novatorsoft/nestjs-auth-module/compare/v1.3.0...v1.3.1) (2025-11-27)
 
 

@@ -84,6 +84,7 @@ describe('JwtService', () => {
   it('should correctly calculate expiresIn using getExpiresIn', () => {
     const expiresIn = service['getExpiresIn']('2d');
     expect(expiresIn).toBeInstanceOf(Date);
-    expect(expiresIn.getTime()).toBe(Date.now() + ms('2d'));
+    const expected = Date.now() + ms('2d');
+    expect(Math.abs(expiresIn.getTime() - expected)).toBeLessThan(1000);
   });
 });

@@ -44,9 +44,9 @@ describe('JwtService', () => {
       { expiresIn: '1h' },
     );
     expect(result).toBeDefined();
-    expect(result.expiresIn).toBe(
-      new Date(Date.now() + ms('1h')).toISOString(),
-    );
+    const expected = Date.now() + ms('1h');
+    const actual = new Date(result.expiresIn).getTime();
+    expect(Math.abs(actual - expected)).toBeLessThan(2000);
   });
 
   it('should generate a token with algorithm', async () => {

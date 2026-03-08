@@ -1,5 +1,12 @@
 
 
+## [1.4.0](https://github.com/novatorsoft/nestjs-auth-module/compare/v1.3.4...v1.4.0) (2026-03-08)
+
+
+### Features
+
+* Add MIT License file to the project ([b997369](https://github.com/novatorsoft/nestjs-auth-module/commit/b99736988f63d763c4075bffd0f08ed5880b90ae))
+
 ## [1.3.4](https://github.com/novatorsoft/nestjs-auth-module/compare/v1.3.3...v1.3.4) (2025-12-02)
 
 ## [1.3.3](https://github.com/novatorsoft/nestjs-auth-module/compare/v1.3.2...v1.3.3) (2025-12-02)

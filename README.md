@@ -1,6 +1,6 @@
 <p align="center"><a href="https://novatorsoft.com" target="_blank"><img src="https://os.novatorsoft.com/novatorsoft/dark-logo.png" width="700" alt="Novatorsoft Logo"/></a></p>
 
-<h1 align="center">React Dynamic Form</h1>
+<h1 align="center">NestJS Auth Module/h1>
 <p align="center">A NestJS authentication module that provides a provider-based abstraction for generating and validating tokens (e.g. JWT).</p>
 
 <p align="center">
